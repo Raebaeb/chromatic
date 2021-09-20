@@ -10,47 +10,44 @@ An app that helps you pick limited color palettes.
 
 ## Wireframes
 
-Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
+Mobile Home
+![chromatica-mobile-home](https://user-images.githubusercontent.com/36183361/134065017-a6f35319-b7f3-49f2-aa06-e12615274474.png)
+
+Mobile Formpage
+![chromatica-mobile-formpage drawio](https://user-images.githubusercontent.com/36183361/134067619-8861f067-14d2-4c2c-bd7e-ead690f12c80.png)
+
+Desktop Home
+![chromatica-desktop-home](https://user-images.githubusercontent.com/36183361/134069454-c520e2cb-831a-4416-a92b-a6f59bd7a1b9.png)
+
+Desktop Create Formpage
+![chromatica-desktop-create-form](https://user-images.githubusercontent.com/36183361/134071415-83160b30-94e8-41c4-8eb7-99a11b6db60f.png)
+
+Desktop Generate Formpage (Post MVP)
+![chromatic-desktop-generator-form](https://user-images.githubusercontent.com/36183361/134073303-7b5083d0-8198-49e4-a140-12fdfefdab53.png)
 
 ## Component Hierarchy
-Show your component hierarchy here! Use [this](https://cms-assets.tutsplus.com/uploads/users/1795/posts/30352/image/GettingStartedWithReduxTutorial-React-Component-Structure.png) as an example.
+
+![chromatica-hierarchy](https://user-images.githubusercontent.com/36183361/134046435-3d0956c6-ce37-4cdb-aaea-1c7a4d5b5534.png)
 
 ## API and Data Sample
 
-Show us a snippet of JSON returned by your Airtable (you can find it under the API documentation) so we know you can access it and get the info you need. This __must__ be properly formatted. An example is below:
-
-```json
+```
 {
-    "records": [
-        {
-            "id": "recONRzIUTuZ5lXaF",
-            "fields": {
-                "author": "Liz Yrineo",
-                "setup": "Why did the tomato turn red?",
-                "punchline": "Because it saw the salad dressing!"
-            },
-            "createdTime": "2020-11-30T16:03:09.000Z"
-        },
-        {
-            "id": "rec3oYZ5Tp0AIDsKe",
-            "fields": {
-                "author": "Rachel Moskowitz",
-                "setup": "What did the green grape say to the red grape?",
-                "punchline": "Breathe, idiot, breathe!"
-            },
-            "createdTime": "2020-11-30T16:03:09.000Z"
-        },
-        {
-            "id": "recA34tOaoE1IVeC1",
-            "fields": {
-                "author": "Gary Grant",
-                "setup": "How do you make holy water?",
-                "punchline": "You boil the hell out of it!"
-            },
-            "createdTime": "2020-11-30T16:03:09.000Z"
-        }
-    ],
-    "offset": "recA34tOaoE1IVeC1"
+  "id": "recCbfksc1Im7hU5w",
+  "fields": {
+    "palette": "chromatica color theme",
+    "color1-hex": "FCEBDA",
+    "color2-hex": "7A9B76",
+    "color 3-hex": "160C28",
+    "color3-rgb": "22, 12, 40",
+    "color1-name": "Antique White",
+    "color1-rgb": "252, 235, 218",
+    "color2-rgb": "122, 155, 118",
+    "color2-name": "Russian Green",
+    "color3-name": "Dark Purple",
+    "username": "rachel"
+  },
+  "createdTime": "2021-09-20T17:25:36.000Z"
 }
 ```
 
@@ -59,36 +56,55 @@ Show us a snippet of JSON returned by your Airtable (you can find it under the A
 The functionality will then be divided into two separate lists: MVP and PostMVP.  Carefully decide what is placed into your MVP, as the client will expect this functionality to be implemented upon project completion.  
 
 #### MVP 
-*These are examples only. Replace with your own MVP features.*
 
-- Find and use external api 
-- Render data on page 
-- Allow user to choose favorites 
+- Display created color palettes on home page
+- Create, edit or delete a palette
+- Use color picker/color API to allow user to select colors for their palette
+- Phone + tablet sizes
+    * 320px — 480px: Mobile devices.
+    * 481px — 768px: iPads, Tablets.
 
 #### PostMVP  
-*These are examples only. Replace with your own Post-MVP features.*
 
-- Add second API
-- Use local storage to save user favorites
+- Copy btn for each hexcode/rgb in a palette
+- Choose a type of color scheme (monochromatic, complimentary, etc) and generate a new palette
+- Small screen + large screen sizes
+    * 769px — 1024px: Small screens, laptops.
+    * 1025px — 1200px: Desktops, large screens.
+- Nice transitions and styling
 
 ## Timeframes
 
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
-
-Time frames are also key in the development cycle.  You have limited time to code all parts of your app.  Your estimates can then be used to evalute possibilities based on time needed and the actual time you have before the app must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add an additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
-
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Create Components | H | 3hrs|  |  |
+| Setup GET request in App component | H | 1hr |  |  |
+| Create Color Picker | H | 3hrs |  |  |
+| Create Palette Component | H | 2hrs |  |  |
+| Create Edit Component | H | 3hrs |  |  |
+| Add Edit Form | H | 1hrs |  |  |
+| Create New Component | H | 2hrs |  |  |
+| Add New Form | H | 1hrs |  |  |
+| Add Header/Nav/Footer | H | 1hrs |  |  |
+| Media Query Mobile | H | 3hrs |  |  |
+| Media Query iPad | H | 2hrs |  |  |
+| Styling App | M | 3hrs |  |  |
+| Styling Components | M | 3hrs |  |  |
+| grab random color palette from colorAPI | L | 2hrs |  |  |
+| add generated palette to new form | L | 2hrs |  |  |
+| Copy/Paste buttons | L | 2hrs |  |  |
+| Test functionality | M | 3hrs |  |  |
+| Transitions | L | 3hrs |  |  |
+| Keep README updated | L | 1hrs |  |  |
+| Code Cleanup | H | 1hr|  |  |
+| Total | H | 42hrs|  |  |
 
 ## SWOT Analysis
 
-### Strengths: I feel very confident in using React
+### Strengths: I feel very confident in using React and I'm investing more time into the planning and organization than my last project.
 
 ### Weaknesses: Combining useage of color API + airtable
 
-### Opportunities:
+### Opportunities: Build smallest to biggest
 
 ### Threats: Styling. I need to push my styling priorities to post-MVP in order to really nail down the functionality before MVP is due.
