@@ -2,7 +2,7 @@
 
 ## Project Name
 
-Chromatic
+Chromatica
 
 ## Project Description
 
