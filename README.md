@@ -27,7 +27,8 @@ Desktop Generate Formpage (Post MVP)
 
 ## Component Hierarchy
 
-![chromatica-hierarchy](https://user-images.githubusercontent.com/36183361/134046435-3d0956c6-ce37-4cdb-aaea-1c7a4d5b5534.png)
+![chromatica-hierarchy](https://user-images.githubusercontent.com/36183361/134073901-fc89a728-f3d6-46ad-9ee2-23e0efe5b5e5.png)
+
 
 ## API and Data Sample
 
