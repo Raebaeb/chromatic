@@ -11,7 +11,7 @@ An app that helps you pick limited color palettes.
 ## Wireframes
 
 Mobile Home
-![chromatica-mobile-home](https://user-images.githubusercontent.com/36183361/134074148-974c1869-fb08-407b-99c6-ae42422ef15a.png)
+![chromatica-mobile-home (1)](https://user-images.githubusercontent.com/36183361/134074233-df0f240f-a9ac-4d6e-ad69-66354a1d2f9d.png)
 
 Mobile Formpage
 ![chromatica-mobile-formpage drawio](https://user-images.githubusercontent.com/36183361/134067619-8861f067-14d2-4c2c-bd7e-ead690f12c80.png)
