@@ -11,19 +11,19 @@ An app that helps you pick limited color palettes.
 ## Wireframes
 
 Mobile Home
-![chromatica-mobile-home (1)](https://user-images.githubusercontent.com/36183361/134074233-df0f240f-a9ac-4d6e-ad69-66354a1d2f9d.png)
+<img src='./wireframes/mobile/mobile-home.png' />
 
 Mobile Formpage
-![chromatica-mobile-formpage drawio](https://user-images.githubusercontent.com/36183361/134067619-8861f067-14d2-4c2c-bd7e-ead690f12c80.png)
+<img src='./wireframes/mobile/mobile-formpage.drawio .png' />
 
 Desktop Home
-![chromatica-desktop-home](https://user-images.githubusercontent.com/36183361/134069454-c520e2cb-831a-4416-a92b-a6f59bd7a1b9.png)
+<img src='./wireframes/desktop/desktop-home.png' />
 
 Desktop Create Formpage
-![chromatica-desktop-create-form](https://user-images.githubusercontent.com/36183361/134071415-83160b30-94e8-41c4-8eb7-99a11b6db60f.png)
+<img src='./wireframes/desktop/desktop-create-form.png' />
 
 Desktop Generate Formpage (Post MVP)
-![chromatic-desktop-generator-form](https://user-images.githubusercontent.com/36183361/134073303-7b5083d0-8198-49e4-a140-12fdfefdab53.png)
+<img src='./wireframes/desktop/desktop-generator-form.png' />
 
 ## Component Hierarchy
 

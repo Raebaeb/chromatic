@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Palette(props) {
   const { palette, username, hex1, hex2, hex3 } = props.palette.fields;
   return (
@@ -7,7 +9,7 @@ function Palette(props) {
       <div className="color-1" style={{ backgroundColor: `${ hex1 }` }}></div>
       <div className="color-2" style={{ backgroundColor: `${ hex2 }` }}></div>
       <div className="color-3" style={{ backgroundColor: `${ hex3 }` }}></div>
-      <button>Edit</button>
+      <Link to={`/edit/${props.palette.id}`}><button>Edit</button></Link>
       <button>Delete</button>
     </container>
   );

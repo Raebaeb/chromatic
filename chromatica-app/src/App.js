@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { baseURL, config } from './services'
-import { Link, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import './App.css';
+import Nav from './components/Nav';
 import Palette from './components/Palette';
-import New from './components/New';
-import Edit from './components/Edit';
+import Form from './components/Form';
 
 function App() {
 
@@ -23,12 +23,7 @@ function App() {
 
   return (
     <div className="App">
-      <header>
-        <nav>
-          <Link to='/new'>create palette</Link>
-        </nav>
-          <Link to='/'>Home</Link>
-      </header>
+      <Nav />
       <main>
         <Route path='/' exact>
         {palettes.map((palette) => (
@@ -36,10 +31,10 @@ function App() {
         ))}
         </Route>
         <Route path='/new' >
-          <New setToggleFetch={setToggleFetch}/>
+          <Form setToggleFetch={setToggleFetch}/>
         </Route>
         <Route path='/edit/:id'>
-          <Edit />
+          <Form setToggleFetch={setToggleFetch} palettes={palettes}/>
         </Route>
       </main>
     </div>
