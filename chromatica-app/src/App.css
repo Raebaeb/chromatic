@@ -1,8 +1,10 @@
 :root {
   --plain-font: 'Comfortaa', san-serif;
   --logo-font: 'Corben', cursive;
-  --dark-teal: #264653;
-  --orange-red: #E76F51;
+  --logo-blue: #47839C;
+  --font-blue: #186B94;
+  --color-border: #264653;
+  --orange: #E76F51;
   --teal: #2A9D8F;
   --mustard: #E9C46A;
 }
