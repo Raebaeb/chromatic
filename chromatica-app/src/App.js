@@ -10,15 +10,15 @@ import Edit from './components/Edit';
 function App() {
 
   const [palettes, setPalettes] = useState([]);
+  const [toggleFetch, setToggleFetch] = useState(false);
 
   useEffect( () => {
     const fetchPalettes = async () => {
       const response = await axios.get(baseURL, config)
       setPalettes(response.data.records)
-      console.log(response.data.records)
     }
     fetchPalettes();
-  },[])
+  },[toggleFetch])
 
 
   return (
@@ -27,14 +27,16 @@ function App() {
         <nav>
           <Link to='/new'>create palette</Link>
         </nav>
-          <Link to='/'></Link>
+          <Link to='/'>Home</Link>
       </header>
       <main>
+        <Route path='/' exact>
         {palettes.map((palette) => (
           <Palette key={palette.id} palette={palette} />
         ))}
+        </Route>
         <Route path='/new' >
-          <New />
+          <New setToggleFetch={setToggleFetch}/>
         </Route>
         <Route path='/edit/:id'>
           <Edit />
