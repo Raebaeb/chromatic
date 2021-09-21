@@ -1,23 +1,45 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { baseURL, config } from './services'
+import { Link, Route } from 'react-router-dom';
 import './App.css';
+import Palette from './components/Palette';
+import New from './components/New';
+import Edit from './components/Edit';
 
 function App() {
+
+  const [palettes, setPalettes] = useState([]);
+
+  useEffect( () => {
+    const fetchPalettes = async () => {
+      const response = await axios.get(baseURL, config)
+      setPalettes(response.data.records)
+      console.log(response.data.records)
+    }
+    fetchPalettes();
+  },[])
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <nav>
+          <Link to='/new'>create palette</Link>
+        </nav>
+          <Link to='/'></Link>
       </header>
+      <main>
+        {palettes.map((palette) => (
+          <Palette key={palette.id} palette={palette} />
+        ))}
+        <Route path='/new' >
+          <New />
+        </Route>
+        <Route path='/edit/:id'>
+          <Edit />
+        </Route>
+      </main>
     </div>
   );
 }

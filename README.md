@@ -33,23 +33,21 @@ Desktop Generate Formpage (Post MVP)
 ## API and Data Sample
 
 ```
-{
-  "id": "recCbfksc1Im7hU5w",
-  "fields": {
-    "palette": "chromatica color theme",
-    "color1-hex": "FCEBDA",
-    "color2-hex": "7A9B76",
-    "color 3-hex": "160C28",
-    "color3-rgb": "22, 12, 40",
-    "color1-name": "Antique White",
-    "color1-rgb": "252, 235, 218",
-    "color2-rgb": "122, 155, 118",
-    "color2-name": "Russian Green",
-    "color3-name": "Dark Purple",
-    "username": "rachel"
-  },
-  "createdTime": "2021-09-20T17:25:36.000Z"
-}
+    "records": [
+        {
+            "id": "recCbfksc1Im7hU5w",
+            "fields": {
+                "hex2": "7A9B76",
+                "hex3": "160C28",
+                "color3": "Dark Purple",
+                "color1": "Antique White",
+                "username": "rachel",
+                "hex1": "FCEBDA",
+                "color2": "Russian Green",
+                "palette": "chromatica color theme"
+            },
+            "createdTime": "2021-09-20T17:25:36.000Z"
+        }
 ```
 
 ### MVP/PostMVP
