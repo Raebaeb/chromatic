@@ -6,6 +6,7 @@ import './App.css';
 import Nav from './components/Nav';
 import Palette from './components/Palette';
 import Form from './components/Form';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -27,7 +28,7 @@ function App() {
       <main>
         <Route path='/' exact>
         {palettes.map((palette) => (
-          <Palette key={palette.id} palette={palette} />
+          <Palette key={palette.id} palette={palette} setToggleFetch={setToggleFetch}/>
         ))}
         </Route>
         <Route path='/new' >
@@ -37,6 +38,7 @@ function App() {
           <Form setToggleFetch={setToggleFetch} palettes={palettes}/>
         </Route>
       </main>
+      <Footer />
     </div>
   );
 }
