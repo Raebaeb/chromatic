@@ -1,5 +1,4 @@
 :root {
-  --plain-font: 'Comfortaa', san-serif;
   --logo-font: 'Corben', cursive;
   --logo-blue: #47839C;
   --font-blue: #186B94;
@@ -21,10 +20,7 @@
 
 /* mobile */
 @media only screen and (max-width: 480px) {
-  .color-1, .color-2, .color-3 {
-    width: 50px;
-    height: 50px;
-  }
+
 }
 /* tablet */
 @media only screen and (min-width: 481px) and (max-width: 768px) {
