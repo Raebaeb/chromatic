@@ -1,4 +1,5 @@
 :root {
+  --reg-font: 'Comfortaa', san-serif;
   --logo-font: 'Corben', cursive;
   --logo-blue: #47839C;
   --font-blue: #186B94;
@@ -8,10 +9,14 @@
   --mustard: #E9C46A;
 }
 
+a {
+  text-decoration: none;
+}
+
 .App {
   min-height: 100vh;
   width: 100vw;
-  display: flex;
+  display: grid;
 }
 .color-1, .color-2, .color-3 {
   width: 100px;
@@ -20,7 +25,17 @@
 
 /* mobile */
 @media only screen and (max-width: 480px) {
-
+  .App {
+    grid-template-rows: 20vh 1fr 50px;
+    grid-column: 1fr;
+  }
+  main {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
 }
 /* tablet */
 @media only screen and (min-width: 481px) and (max-width: 768px) {

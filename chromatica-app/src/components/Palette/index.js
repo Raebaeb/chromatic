@@ -12,13 +12,17 @@ function Palette(props) {
   }
   return (
     <container className="palette-card">
-      <h2>{palette}</h2>
-      <h4>{username}</h4>
-      <div className="color-1" style={{ backgroundColor: `${ hex1 }` }}></div>
-      <div className="color-2" style={{ backgroundColor: `${ hex2 }` }}></div>
-      <div className="color-3" style={{ backgroundColor: `${ hex3 }` }}></div>
-      <Link to={`/edit/${props.palette.id}`}><button>Edit</button></Link>
-      <button onClick={handleDelete}>Delete</button>
+      <section className="palette-info">
+        <h2>{palette}</h2>
+        <h4>{username}</h4>
+        <Link to={`/edit/${props.palette.id}`}><button className='edit-btn'>edit</button></Link>
+        <button className='delete-btn' onClick={handleDelete}>delete</button>
+      </section>
+      <section className="palette-colors">
+        <article className="color-1" style={{ backgroundColor: `${ hex1 }` }}></article>
+        <article className="color-2" style={{ backgroundColor: `${ hex2 }` }}></article>
+        <article className="color-3" style={{ backgroundColor: `${ hex3 }` }}></article>
+      </section>
     </container>
   );
 }

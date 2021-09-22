@@ -8,7 +8,7 @@ const Nav = () => {
       <nav>
         <Link to='/new'>create palette</Link>
       </nav>
-        <Link to='/'>Home</Link>
+        <Link to='/'><img src='' alt='chromatica logo'></img></Link>
     </header>
   );
 };
