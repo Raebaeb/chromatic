@@ -28,7 +28,6 @@ a {
   .App {
     grid-template-rows: 22vh 1fr 50px;
     grid-column: 1fr;
-    grid-gap: 10px;
   }
   main {
     grid-row: 2 / 3;

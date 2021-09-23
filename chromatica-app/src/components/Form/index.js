@@ -2,6 +2,9 @@ import axios from "axios";
 import { useState, React, useEffect } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import { baseURL, config } from "../../services";
+import ColorInput1 from "../ColorInputs/ColorInput1";
+import ColorInput2 from "../ColorInputs/ColorInput2";
+import ColorInput3 from "../ColorInputs/ColorInput3";
 import "./form.css";
 
 const Form = (props) => {
@@ -69,7 +72,7 @@ const Form = (props) => {
           onChange={(e) => setPaletteName(e.target.value)}
         />
         {params.id ? (
-          <h3>{username}</h3>
+          <h4 id='edit-user'>{username}</h4>
         ) : (
           <input
             required
@@ -83,58 +86,9 @@ const Form = (props) => {
             onChange={(e) => setUsername(e.target.value)}
           />
         )}
-        <label htmlFor="col-input1" style={{ backgroundColor: `${color1}`}}>click
-        <input
-          type="color"
-          className="form-color"
-          id="col-input1"
-          value={color1}
-          name="pick color one"
-          onChange={(e) => {
-            setColor1(e.target.value);
-            setName1("");
-          }}
-        />
-        </label>
-        <section className="input-info">
-          <h3>placeholder</h3>
-          <h5>{color1}</h5>
-          <h5></h5>
-        </section>
-        <label htmlFor="col-input2" style={{ backgroundColor: `${color2}`}}>to
-        <input
-          id="col-input2"
-          type="color"
-          value={color2}
-          name="pick color two"
-          onChange={(e) => {
-            setColor2(e.target.value);
-            setName2("");
-          }}
-        />
-        </label>
-        <section className="input-info">
-          <h3></h3>
-          <h5>{color2}</h5>
-          <h5></h5>
-        </section>
-        <label htmlFor="col-input3" style={{ backgroundColor: `${color3}`}}>pick
-        <input
-          type="color"
-          id="col-input3"
-          value={color3}
-          name="pick color three"
-          onChange={(e) => {
-            setColor3(e.target.value);
-            setName3("");
-          }}
-        />
-        </label>
-        <section className="input-info">
-          <h3></h3>
-          <h5>{color3}</h5>
-          <h5></h5>
-        </section>
+        <ColorInput1 color1={color1} setColor1={setColor1}/>
+        <ColorInput2 color2={color2} setColor2={setColor2}/>
+        <ColorInput3 color3={color3} setColor3={setColor3} />
         <button type="submit" id="submit-btn">
           save palette
         </button>
