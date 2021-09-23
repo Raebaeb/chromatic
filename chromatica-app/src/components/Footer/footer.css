@@ -26,7 +26,7 @@ span {
 /* mobile */
 @media only screen and (max-width: 480px) {
   footer {
-    height: 40px;
+    height: 5vh;
     grid-row: 3 / 4;
     grid-column: 1 / 2;
     font-size: 12px;
