@@ -28,6 +28,7 @@ a {
   .App {
     grid-template-rows: 20vh 1fr 50px;
     grid-column: 1fr;
+    grid-gap: 10px;
   }
   main {
     grid-row: 2 / 3;
@@ -41,7 +42,7 @@ a {
 @media only screen and (min-width: 481px) and (max-width: 768px) {
 
 }
-/* laptops */
+/* laptop */
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
 
 }
