@@ -21,7 +21,6 @@ nav a {
 /* mobile */
 @media only screen and (max-width: 480px) {
 
-  
   header {
     box-sizing: border-box;
     grid-row: 1 / 2;
@@ -30,7 +29,7 @@ nav a {
     justify-items: center;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 3fr;
-    padding-top: 2vh;
+    margin-top: 2vh;
   }
 
   nav {
@@ -44,7 +43,9 @@ nav a {
 }
 /* tablet */
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-
+  #logo {
+    width: 90vw;
+  }
 }
 /* laptops */
 @media only screen and (min-width: 769px) and (max-width: 1024px) {

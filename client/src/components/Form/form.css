@@ -1,28 +1,13 @@
 
-form input[type="color"] {
-  opacity: 0;
-  border: none;
-}
-
-label {
-  font-size: 2.5vh;
-  color: white;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
 .input-info, #submit-btn {
   box-sizing: border-box;
   color: var(--font-blue);
 }
 
-
-label,
 #form-palette,
 #form-user,
-#edit-user {
+#edit-user,
+#submit-btn {
   font-family: var(--logo-font);
   text-align: center;
 }
@@ -44,7 +29,7 @@ label,
 }
 
 #submit-btn {
-  font-family: var(--reg-font);
+  color: var(--mustard)
 }
 #submit-btn:hover {
   border-color: var(--mustard);
@@ -54,50 +39,19 @@ label,
 @media only screen and (max-width: 480px) {
   form {
     box-sizing: border-box;
-    padding: 8px 0;
+    padding: 8px;
     grid-row: 2 / 3;
-    margin: 20px auto;
+    margin: 20px auto 0 auto;
     width: 80vw;
-    height: 65vh;
     max-height: 440px;
     border: 2px solid var(--font-blue);
     border-radius: 40px;
     display: grid;
+    grid-gap: 5px;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 6vh) repeat(3, 1fr) 6vh;
+    grid-template-rows: repeat(2, 4.5vh) repeat(3, 1fr);
     align-items: center;
     justify-items: center;
-  }
-
-  form label {
-    height: 13vh;
-    width: 13vh;
-    max-height: 86px;
-    max-width: 86px;
-    border: 1px solid var(--color-border);
-    border-radius: 15px;
-    grid-column: 1 / 2;
-  }
-
-  input[type=color] {
-    height: 4vh;
-  }
-
-  .input-info {
-    width: 35vw;
-    text-align: center;
-    padding-right: 10px;
-  }
-  .input-info h3, h5 {
-    margin: 3px 0;
-    font-size: 12px;
-  }
-  .input-info h3 {
-    font-family: var(--logo-font);
-  }
-  .input-info h5 {
-    border: 1px solid var(--font-blue);
-    border-radius: 3px;
   }
 
 
@@ -106,22 +60,27 @@ label,
   #submit-btn {
     border: 1px solid var(--font-blue);
     grid-column: 1 / 3;
-    height: 3.5vh;
   }
   #form-palette {
+    font-size: large;
     grid-row: 1 / 2;
     width: 55vw;
+    height: 3.5vh;
+    align-self: flex-end;
   }
   #form-user, #edit-user {
     grid-column: 1 / 3;
     grid-row: 2 / 3;
     align-self: flex-start;
-    width: 45vw;
+    width: 40vw;
+    height: 3vh;
   }
 
   #submit-btn {
+    margin: 10px auto 5px auto;
     grid-row: 6 / 7;
-    font-size: 15px;
+    font-size: 17px;
+    width: 50vw;
   }
 }
 /* tablet */

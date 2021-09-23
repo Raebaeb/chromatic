@@ -1,4 +1,5 @@
 import React from 'react';
+import './colorinputs.css'
 
 const ColorInput2 = (props) => {
   return (
