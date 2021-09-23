@@ -1,9 +1,18 @@
-#form-palette, #form-user, label {
+form input[type="color"] {
+  opacity: 0;
+  border: none;
+}
+
+#form-palette,
+#form-user,
+label {
   font-family: var(--logo-font);
 }
 
-#form-palette, #form-user, #submit-btn {
-  border: 1px solid var(--logo-blue);
+#form-palette,
+#form-user,
+#submit-btn {
+  border: 2px solid var(--logo-blue);
   border-radius: 5px;
   background-color: transparent;
 }
@@ -11,60 +20,72 @@
 /* mobile */
 @media only screen and (max-width: 480px) {
   form {
+    box-sizing: border-box;
+    padding: 8px 0;
     grid-row: 2 / 3;
-    margin: 0 auto;
+    margin: 20px auto;
     width: 80vw;
-    height: 60vh;
+    height: 65vh;
     border: 2px solid var(--font-blue);
     border-radius: 25px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 13vh repeat(3, 1fr);
+    grid-template-rows: repeat(2, 6vh) repeat(3, 1fr) 6vh;
+    align-items: center;
+    justify-items: center;
   }
-  form h5 {
-    border: 1px solid var(--font-blue);
-  }
-  form input[type=color] {
-    opacity: 0;
-    border: none;
-  }
-  form label, input[type=color] {
+
+  form label {
     height: 75px;
     width: 75px;
     padding: 0;
+    color: white;
+    border: 1px solid var(--color-border);
     border-radius: 10px;
     grid-column: 1 / 2;
   }
-
-  label {
-    color: white;
-    border: 1px solid var(--color-border);
+  .input-info {
+    width: 35vw;
+    text-align: center;
   }
-
-  section {
-    grid-column: 2 / 3;
+  .input-info h3, h5 {
+    margin: 3px 0;
+    box-sizing: border-box;
+    color: var(--font-blue);
+    font-size: 12px;
   }
-
-  #form-palette, #form-user, #submit-btn {
+  .input-info h3 {
+    font-family: var(--logo-font);
+  }
+  .input-info h5 {
     border: 1px solid var(--font-blue);
-    border-radius: 5px;
-    background-color: transparent;
+    border-radius: 3px;
+    height: 16px;
+  }
+
+  #form-palette,
+  #form-user,
+  #submit-btn {
+    border: 1px solid var(--font-blue);
     grid-column: 1 / 3;
+    height: 4vh;
   }
   #form-palette {
     grid-row: 1 / 2;
-    width: 65vw;
-    height: 5vh;
+    width: 55vw;
   }
   #form-user {
+    grid-row: 2 / 3;
+    width: 45vw;
+  }
 
+  #submit-btn {
+    grid-row: 6 / 7;
   }
 }
 /* tablet */
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-
 }
 /* laptops */
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-
 }
