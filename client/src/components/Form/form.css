@@ -79,6 +79,9 @@ label,
     grid-column: 1 / 2;
   }
 
+  input[type=color] {
+    height: 4vh;
+  }
 
   .input-info {
     width: 35vw;
