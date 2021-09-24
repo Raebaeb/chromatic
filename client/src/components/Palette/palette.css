@@ -1,118 +1,140 @@
+.color-1,
+.color-2,
+.color-3 {
+  width: 60px;
+  height: 60px;
+  border: solid 1px var(--color-border);
+  border-radius: 10px;
+}
+.delete-btn {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  margin-right: 2vh;
+}
+
+.edit-link, .delete-btn, .palette-username {
+  align-self: end;
+}
+.palette-card {
+  box-sizing: border-box;
+  display: grid;
+  margin: 1vh auto;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 3fr;
+  height: 115px;
+  width: 80vw;
+  border: solid 2px var(--font-blue);
+  border-radius: 15px;
+}
+
+.palette-card button {
+  width: 60px;
+  height: 20px;
+  font-family: var(--reg-font);
+  color: var(--font-blue);
+  background-color: transparent;
+  border: 1px solid var(--font-blue);
+  border-radius: 3px;
+}
+.palette-card > btn:hover {
+  color: var(--mustard);
+  border: solid 1px var(--mustard);
+}
+.palette-card .edit-btn {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  margin-left: 2vh;
+}
+.palette-colors {
+  grid-row: 2 / 3;
+  grid-column: 1 / 4;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.palette-name, .palette-username {
+  display: none;
+}
+.palette-username, .palette-username-top {
+  font-family: var(--logo-font);
+  color: var(--orange);
+  font-size: 15px;
+  text-align: center;
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  margin: 0;
+  line-height: 20px;
+}
+
+
+/* tablet */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .color-1,
+  .color-2,
+  .color-3 {
+    width: 11vh;
+    height: 11vh;
+    border: solid 1px var(--color-border);
+    border-radius: 15px;
+  }
+  .delete-btn, .edit-link  {
+    justify-self: center;
+    align-self: center;
+    grid-row: 2 / 3;
+  }
+
   .palette-card {
-    box-sizing: border-box;
-    display: grid;
-
+    grid-template-rows: 1fr 5fr;
+    margin: 3vh auto 0 auto;
+    height: 18vh;
+    border-radius: 30px;
   }
-  .palette-card h4 {
-    font-family: var(--logo-font);
+  .palette-card button, .edit-link>.edit-btn {
+    width: 13vw;
+    height: 30px;
+    max-width: 90px;
+    font-size: 15px;
+    border-radius: 5px;
+    margin: 0;
+  }
+  .palette-colors {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .palette-name {
+    display: inline;
+    text-align: center;
+    align-self: end;
+    font-size: 15px;
+    line-height: 10px;
     color: var(--orange);
-
+    display: inline;
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
   }
-
-  .palette-card>btn:hover {
-    color: var(--mustard);
-    border: solid 1px var(--mustard);
+  .palette-name, .palette-username {
+    font-family: var(--logo-font);
+    margin: 0;
   }
-
-@media only screen and (max-width: 480px) {
-  h2 {
+  .palette-username {
+    display: inline;
+    color: var(--teal);
+    margin: 2px 15vw 0 0;
+    font-size: 15px;
+    text-align: right;
+  }
+  .palette-username-top {
     display: none;
   }
 
-  .color-1, .color-2, .color-3 {
-    width: 60px;
-    height: 60px;
-    border: solid 1px var(--color-border);
-    border-radius: 10px;
-  }
-  .delete-btn {
-    grid-column: 3 / 4;
-    grid-row: 1 / 2;
-  }
-
-  .palette-colors {
-    grid-row: 2 / 3;
-    grid-column: 1 / 4;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-  .palette-card {
-    margin: 1vh auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 3fr;
-    height: 115px;
-    width: 80vw;
-    border: solid 2px var(--font-blue);
-    border-radius: 15px;
-  }
-  .palette-card .edit-btn {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
-  .palette-card button {
-    width: 60px;
-    height: 20px;
-    font-family: var(--reg-font);
-    color: var(--font-blue);
-    background-color: transparent;
-    border: 1px solid var(--font-blue);
-    border-radius: 3px;
-  }
-  .palette-card h4 {
-    font-size: 15px;
-    text-align: center;
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
-    margin: 0;
-    line-height: 20px;
-  }
-  
-
-}
-/* tablet */
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-  .palette-card h2, h4 {
-    font-family: var(--logo-font);
-    margin: 0;
-  }
-  .color-1, .color-2, .color-3 {
-    width: 60px;
-    height: 60px;
-    border: solid 1px var(--color-border);
-    border-radius: 10px;
-  }
-  .delete-btn {
-    grid-row: 2 / 3;
-    grid-column: 3 / 4;
-  }
-  .palette-card {
-    margin: 0 auto 3vh auto;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 3fr;
-    height: 20vh;
-    width: 80vw;
-    border: solid 3px var(--font-blue);
-    border-radius: 25px;
-  }
-  .palette-colors {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-  .palette-card button {
-    width: 60px;
-    height: 20px;
-    font-family: var(--reg-font);
-    color: var(--font-blue);
-    background-color: transparent;
-    border: 1px solid var(--font-blue);
-    border-radius: 3px;
-  }
 }
 /* laptops */
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-
+}
+/* desktop */
+@media only screen and (min-width: 1025px) {
 }

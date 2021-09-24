@@ -1,8 +1,10 @@
 footer {
+  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+  font-size: 12px;
   position: fixed;
   bottom: 0;
   color: white;
-  font-size: 20px;
   width: 100vw;
   height: 5vh;
   background-color: var(--logo-blue);
@@ -10,27 +12,22 @@ footer {
   align-items: center;
 }
 
-footer a {
+#footer-link {
   margin: 0 auto;
 }
 
-footer a:visited {
+#footer-link:visited {
   color: white;
 }
 
-span {
+footer span {
   font-family: var(--logo-font);
 }
 
 
 /* mobile */
 @media only screen and (max-width: 480px) {
-  footer {
-    height: 5vh;
-    grid-row: 3 / 4;
-    grid-column: 1 / 2;
-    font-size: 12px;
-  }
+
 }
 /* tablet */
 @media only screen and (min-width: 481px) and (max-width: 768px) {

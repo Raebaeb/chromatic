@@ -10,6 +10,7 @@
 }
 
 a {
+  color: var(--font-blue);
   text-decoration: none;
 }
 
@@ -19,40 +20,31 @@ button {
 main {
   margin: 0;
   display: flex;
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  flex-direction: column;
 }
 
 .App {
   min-height: 100vh;
   width: 100vw;
   display: grid;
-}
-.color-1, .color-2, .color-3 {
-  width: 100px;
-  height: 100px;
+  grid-template-rows: 24vh 1fr 50px;
+  grid-column: 1fr;
 }
 
-/* mobile */
-@media only screen and (max-width: 480px) {
-  .App {
-    grid-template-rows: 24vh 1fr 50px;
-    grid-column: 1fr;
-  }
-  main {
-    grid-row: 2 / 3;
-    grid-column: 1 / 2;
-    display: flex;
-    flex-direction: column;
-  }
-}
+
 /* tablet */
 @media only screen and (min-width: 481px) and (max-width: 768px) {
   main {
-    grid-row: 2 / 3;
-    grid-column: 1 / 2;
-    flex-direction: column;
+    padding-top: 20px;
   }
 }
 /* laptop */
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+}
+/* desktop */
+@media only screen and (min-width: 1025px) {
 
 }
