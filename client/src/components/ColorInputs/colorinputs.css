@@ -8,7 +8,7 @@ input[type="color"] {
 form label {
   font-family: var(--logo-font);
   text-align: center;
-  font-size: 2.5vh;
+  font-size: 5vw;
   color: white;
   display: flex;
   flex-wrap: wrap;
@@ -49,6 +49,24 @@ h5 {
 
 /* tablet */
 @media only screen and (min-width: 481px) and (max-width: 768px) {
+  input[type="color"] {
+    opacity: 0;
+    border: none;
+    height: 4vh;
+    max-height: 27px;
+  }
+  form label {
+    height: 28vw;
+    width: 28vw;
+    max-height: none;
+    max-width: none;
+    border: 1px solid var(--color-border);
+    border-radius: 15px;
+  }
+  .input-info {
+    width: 25vw;
+    text-align: center;
+  }
 }
 /* laptops */
 @media only screen and (min-width: 769px) and (max-width: 1024px) {

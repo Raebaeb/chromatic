@@ -1,31 +1,27 @@
-
 a:visited {
   color: var(--font-blue);
 }
-
 header {
   display: flex;
   flex-direction: column;
   grid-row: 1 / 2;
   grid-column: 1 / 2;
-  margin-top: 2vh;
+  contain: content;
+  padding-top: 2vh;
   box-sizing: border-box;
-  grid-template-rows: 1fr 3fr;
 }
-
 nav {
   display: flex;
   padding: 12px 0 8px 0;
 
 }
-
 nav a {
   margin: 0 auto;
-  font-size: 14px;
+  font-size: 4vw;
 }
-
 #logo {
   width: 90vw;
+  max-width: 350px
 }
 #logo, #logo-link {
   margin: 0 auto;
@@ -34,8 +30,7 @@ nav a {
 /* tablet */
 @media only screen and (min-width: 481px) and (max-width: 768px) {
   header {
-    grid-template-rows: 1fr 5fr;
-    height: 225px;
+    height: 210px;
   }
   
   nav {
@@ -43,17 +38,28 @@ nav a {
   }
 
   nav a {
-    font-size: 25px;
+    font-size: 3.5vw;
   }
   
   #logo {
     width: 85vw;
+    max-width: 510px;
   }
 
 }
 /* laptops */
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-
+  header {
+    margin-top: 0;
+  }
+  
+  nav a {
+    font-size: 3vw;
+  }
+  #logo {
+    width: 55vw;  
+    max-width: none;
+  }
 }
 
 /* desktop */

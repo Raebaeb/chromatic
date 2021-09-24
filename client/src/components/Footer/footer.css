@@ -6,7 +6,7 @@ footer {
   bottom: 0;
   color: white;
   width: 100vw;
-  height: 5vh;
+  height: 7vw;
   background-color: var(--logo-blue);
   display: flex;
   align-items: center;
@@ -24,20 +24,21 @@ footer span {
   font-family: var(--logo-font);
 }
 
-
-/* mobile */
-@media only screen and (max-width: 480px) {
-
-}
 /* tablet */
 @media only screen and (min-width: 481px) and (max-width: 768px) {
   footer {
-    font-size: 15px;
+    font-size: 2vw;
+    height: 5vw;
   }
-
-
 }
 /* laptops */
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
+  footer {
+    font-size: 20px; 
+    height: 5vw;
+  }
+}
+/* desktop */
+@media only screen and (min-width: 1025px) {
 
 }

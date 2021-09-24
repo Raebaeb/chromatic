@@ -86,9 +86,11 @@ const Form = (props) => {
             onChange={(e) => setUsername(e.target.value)}
           />
         )}
-        <ColorInput1 color1={color1} setColor1={setColor1}/>
-        <ColorInput2 color2={color2} setColor2={setColor2}/>
-        <ColorInput3 color3={color3} setColor3={setColor3} />
+        <div id='col-input-container'>
+          <ColorInput2 color2={color2} setColor2={setColor2}/>
+          <ColorInput1 color1={color1} setColor1={setColor1}/>
+          <ColorInput3 color3={color3} setColor3={setColor3} />
+        </div>
         <button type="submit" id="submit-btn">
           save palette
         </button>

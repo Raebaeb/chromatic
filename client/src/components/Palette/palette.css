@@ -15,10 +15,13 @@
 .edit-link, .delete-btn, .palette-username {
   align-self: end;
 }
+.palette-all {
+  margin: 0 auto;
+}
 .palette-card {
   box-sizing: border-box;
   display: grid;
-  margin: 1vh auto;
+  margin: 1vh 0;
   grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: 1fr 3fr;
   height: 115px;
@@ -52,10 +55,10 @@
   justify-content: space-evenly;
   align-items: center;
 }
-.palette-name, .palette-username {
+.palette-name, .palette-username, .palette-name-top {
   display: none;
 }
-.palette-username, .palette-username-top {
+.palette-username, .palette-username-top, .palette-name-top {
   font-family: var(--logo-font);
   color: var(--orange);
   font-size: 15px;
@@ -74,6 +77,8 @@
   .color-3 {
     width: 11vh;
     height: 11vh;
+    max-height: 83px;
+    max-width: 83px;
     border: solid 1px var(--color-border);
     border-radius: 15px;
   }
@@ -82,17 +87,25 @@
     align-self: center;
     grid-row: 2 / 3;
   }
-
+  .palette-all {
+    margin: 0 auto 1vh auto;
+    width: 80vw;
+    max-width: 520px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
   .palette-card {
     grid-template-rows: 1fr 5fr;
-    margin: 3vh auto 0 auto;
+    max-height: 140px;
     height: 18vh;
-    border-radius: 30px;
+    margin: 0;
+    border-radius: 25px;
   }
   .palette-card button, .edit-link>.edit-btn {
     width: 13vw;
     height: 30px;
-    max-width: 90px;
+    max-width: 80px;
     font-size: 15px;
     border-radius: 5px;
     margin: 0;
@@ -104,37 +117,90 @@
     justify-content: space-between;
     align-items: center;
   }
-
   .palette-name {
+    font-family: var(--logo-font);
+    margin: 0;
     display: inline;
     text-align: center;
     align-self: end;
-    font-size: 15px;
+    font-size: 2.5vw;
     line-height: 10px;
     color: var(--orange);
     display: inline;
     grid-column: 1 / 4;
     grid-row: 1 / 2;
   }
-  .palette-name, .palette-username {
-    font-family: var(--logo-font);
-    margin: 0;
-  }
   .palette-username {
     display: inline;
     color: var(--teal);
-    margin: 2px 15vw 0 0;
-    font-size: 15px;
+    margin: 0 5vw 0 0;
+    font-size: 2.3vw;
     text-align: right;
   }
   .palette-username-top {
     display: none;
   }
-
 }
 /* laptops */
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .color-1,
+  .color-2,
+  .color-3 {
+    width: 8vw;
+    height: 8vw;
+    border-radius: 15px;
+  }
+  .delete-btn, .edit-link  {
+    align-self: center;
+  }
+  .palette-all {
+    width: 42vw;
+    margin-bottom: 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .palette-card {
+    grid-template-rows: 1fr; 
+    grid-template-columns: 1fr 4fr 1fr;
+    width: 42vw;
+    margin: 0;
+  }
+  .palette-card button, .edit-link>.edit-btn {
+    width: 6vw;
+    height: 24px;
+    font-size: 13px;
+    border-radius: 5px;
+    margin: 1vw;
+  }
+  .palette-colors {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .palette-name-top {
+    display: inline;
+    line-height: 25px;
+    font-size: 1.6vw;
+    text-align: left;
+    margin: 0 0 0 3vw;
+    justify-self: flex-start;
+  }
+  .palette-username {
+    display: inline;
+    color: var(--teal);
+    margin: 0 3vw 0 0;
+    font-size: 1.5vw;
+    text-align: right;
+    justify-self: flex-end;
+  }
+  .palette-name, .palette-username-top {
+    display: none;
+  }
 }
+
 /* desktop */
 @media only screen and (min-width: 1025px) {
 }
