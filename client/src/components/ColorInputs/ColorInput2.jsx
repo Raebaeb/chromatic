@@ -7,7 +7,7 @@ const ColorInput2 = (props) => {
 
   useEffect(() => {
     setRgb(props.hexToRgb(props.color2))
-  },[props.color2])
+  },[props])
 
   return (
     <div className="col-input-each">
@@ -29,8 +29,8 @@ const ColorInput2 = (props) => {
       </label>
       <section className="color-info">
         <h3></h3>
-        <h5>{props.color2}</h5>
-        <h5>rgb({rgb.r}, {rgb.g}, {rgb.b})</h5>
+        <h5 className="color-code" onClick={props.copyText}>{props.color2}</h5>
+        <h5 className="color-code" onClick={props.copyText}>rgb({rgb.r}, {rgb.g}, {rgb.b})</h5>
       </section>
     </div>
   );

@@ -64,6 +64,24 @@ const Form = (props) => {
       b: parseInt(result[3], 16)
     } : null;
   }
+
+  async function copyText(e) {
+    if (!navigator.clipboard) {
+      return
+    }
+    const text = e.target.innerText
+    try {
+      await navigator.clipboard.writeText(text);
+      e.target.className = "color-code copied"
+      e.target.textContent = "copied!"
+      setTimeout(() => {
+        e.target.className = "color-code";
+        e.target.textContent = text;
+      }, 1000)
+    } catch (err) {
+      console.error('Failed to copy!', err)
+    }
+  };
   
 
   return (
@@ -81,7 +99,7 @@ const Form = (props) => {
           onChange={(e) => setPaletteName(e.target.value)}
         />
         {params.id ? (
-          <h4 id='edit-user'>{username}</h4>
+          <h4 id='edit-user'>by: {username}</h4>
         ) : (
           <input
             required
@@ -96,9 +114,9 @@ const Form = (props) => {
           />
         )}
         <div id='col-inputs-container'>
-          <ColorInput1 color1={color1} setColor1={setColor1} hexToRgb={hexToRgb}/>
-          <ColorInput2 color2={color2} setColor2={setColor2} hexToRgb={hexToRgb}/>
-          <ColorInput3 color3={color3} setColor3={setColor3} hexToRgb={hexToRgb}/>
+          <ColorInput1 color1={color1} setColor1={setColor1} hexToRgb={hexToRgb} copyText={copyText}/>
+          <ColorInput2 color2={color2} setColor2={setColor2} hexToRgb={hexToRgb} copyText={copyText}/>
+          <ColorInput3 color3={color3} setColor3={setColor3} hexToRgb={hexToRgb} copyText={copyText}/>
         </div>
         <button type="submit" id="submit-btn">
           save palette

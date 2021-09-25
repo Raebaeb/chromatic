@@ -18,7 +18,9 @@ form label {
   border-radius: 15px;
   grid-column: 1 / 2;
 }
+.color-code {
 
+}
 .color-info,
 #submit-btn {
   box-sizing: border-box;
@@ -47,13 +49,16 @@ h5 {
   align-items: center;
   margin-bottom: 2vw;
 }
+.copied {
+  background-color: var(--font-blue);
+  color: white;
+}
 .form-color {
   opacity: 0;
   border: none;
   height: 4vh;
   max-height: 27px;
 }
-
 
 /* tablet */
 @media only screen and (min-width: 481px) and (max-width: 768px) {
