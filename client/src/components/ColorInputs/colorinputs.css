@@ -35,7 +35,8 @@ form label {
 .color-info h3,
 h5 {
   margin: 3px 0;
-  font-size: 12px;
+  font-size: 3vw;
+  padding: 2px 0;
 }
 .color-info h3 {
   font-family: var(--logo-font);

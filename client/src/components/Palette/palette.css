@@ -58,7 +58,7 @@
 .palette-name, .palette-username, .palette-name-top {
   display: none;
 }
-.palette-username, .palette-username-top, .palette-name-top {
+.palette-username-top, .palette-name-top {
   font-family: var(--logo-font);
   color: var(--orange);
   font-size: 15px;
@@ -67,6 +67,7 @@
   grid-column: 2 / 3;
   margin: 0;
   line-height: 20px;
+  align-self: end;
 }
 
 
