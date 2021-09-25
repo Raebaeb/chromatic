@@ -1,10 +1,16 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 import './colorinputs.css'
 
 const ColorInput1 = (props) => {
-
+  const [rgb, setRgb] = useState({})
+  
+  useEffect(() => {
+    setRgb(props.hexToRgb(props.color1))
+  },[props.color1])
+  
   return (
-    <>
+    <div className='col-input-each'>
       <label htmlFor="col-input1" style={{ backgroundColor: `${props.color1}`}}>click
         <input
           type="color"
@@ -17,12 +23,12 @@ const ColorInput1 = (props) => {
           }}
         />
         </label>
-        <section className="input-info">
+        <section className="color-info">
           <h3>placeholder</h3>
           <h5>{props.color1}</h5>
-          <h5></h5>
+          <h5>rgb({rgb.r}, {rgb.g}, {rgb.b})</h5>
         </section>
-    </>
+    </div>
   );
 };
 

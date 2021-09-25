@@ -1,26 +1,38 @@
-import React from 'react';
-import './colorinputs.css'
+import React from "react";
+import { useState, useEffect } from "react";
+import "./colorinputs.css";
 
 const ColorInput3 = (props) => {
+  const [rgb, setRgb] = useState({});
+  useEffect(() => {
+    setRgb(props.hexToRgb(props.color3))
+  },[props.color3])
+  
   return (
-    <>
-        <label htmlFor="col-input3" style={{ backgroundColor: `${props.color3}`}}>pick
-          <input
-            type="color"
-            id="col-input3"
-            value={props.color3}
-            name="pick color three"
-            onChange={(e) => {
-              props.setColor3(e.target.value);
-            }}
-          />
-        </label>
-        <section className="input-info">
-          <h3></h3>
-          <h5>{props.color3}</h5>
-          <h5></h5>
-        </section>
-    </>
+    <div className="col-input-each">
+      <label
+        htmlFor="col-input3"
+        style={{ backgroundColor: `${props.color3}` }}
+      >
+        pick
+        <input
+          className="form-color"
+          type="color"
+          id="col-input3"
+          value={props.color3}
+          name="pick color three"
+          onChange={(e) => {
+            props.setColor3(e.target.value);
+            setRgb(props.hexToRgb(props.color3));  
+          }}
+        />
+      </label>
+      <section className="color-info">
+        <h3></h3>
+        <h5>{props.color3}</h5>
+        <h5>rgb({rgb.r}, {rgb.g}, {rgb.b})</h5>
+      </section>
+    </div>
   );
 };
 

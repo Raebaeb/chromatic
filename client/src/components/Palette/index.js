@@ -24,7 +24,7 @@ function Palette(props) {
           <article className="color-3" style={{ backgroundColor: `${hex3}` }}></article>
         </section>
       </container>
-      <h4 className='palette-username'>{username}</h4>
+      <h4 className='palette-username'>created by: {username}</h4>
       </div>
   );
 }

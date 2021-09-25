@@ -13,11 +13,11 @@ const Form = (props) => {
   const [paletteName, setPaletteName] = useState("");
   const [username, setUsername] = useState("");
   const [color1, setColor1] = useState("#A7ABAE");
+  const [color2, setColor2] = useState("#A7ABAE");
+  const [color3, setColor3] = useState("#A7ABAE");
   const [name1, setName1] = useState("");
   const [name2, setName2] = useState("");
   const [name3, setName3] = useState("");
-  const [color2, setColor2] = useState("#A7ABAE");
-  const [color3, setColor3] = useState("#A7ABAE");
 
   useEffect(() => {
     if (params.id) {
@@ -56,6 +56,15 @@ const Form = (props) => {
     props.setToggleFetch((curr) => !curr);
     history.push("/");
   };
+  function hexToRgb(hex) {
+    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+      r: parseInt(result[1], 16),
+      g: parseInt(result[2], 16),
+      b: parseInt(result[3], 16)
+    } : null;
+  }
+  
 
   return (
     <>
@@ -86,10 +95,10 @@ const Form = (props) => {
             onChange={(e) => setUsername(e.target.value)}
           />
         )}
-        <div id='col-input-container'>
-          <ColorInput2 color2={color2} setColor2={setColor2}/>
-          <ColorInput1 color1={color1} setColor1={setColor1}/>
-          <ColorInput3 color3={color3} setColor3={setColor3} />
+        <div id='col-inputs-container'>
+          <ColorInput1 color1={color1} setColor1={setColor1} hexToRgb={hexToRgb}/>
+          <ColorInput2 color2={color2} setColor2={setColor2} hexToRgb={hexToRgb}/>
+          <ColorInput3 color3={color3} setColor3={setColor3} hexToRgb={hexToRgb}/>
         </div>
         <button type="submit" id="submit-btn">
           save palette

@@ -1,18 +1,14 @@
-input[type="color"] {
-  opacity: 0;
-  border: none;
-  height: 4vh;
-  max-height: 27px;
-}
 
 form label {
+  box-sizing: border-box;
   font-family: var(--logo-font);
   text-align: center;
   font-size: 5vw;
   color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--color-border);
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: flex-end;
   height: 13vh;
   width: 13vh;
@@ -23,52 +19,83 @@ form label {
   grid-column: 1 / 2;
 }
 
-.input-info,
+.color-info,
 #submit-btn {
   box-sizing: border-box;
   color: var(--font-blue);
 }
 
-.input-info {
+.color-info {
   width: 35vw;
   text-align: center;
-  padding-right: 10px;
+  padding-left: 4vw;
 }
-.input-info h3,
+.color-info h3,
 h5 {
   margin: 3px 0;
   font-size: 12px;
 }
-.input-info h3 {
+.color-info h3 {
   font-family: var(--logo-font);
 }
-.input-info h5 {
+.color-info h5 {
   border: 1px solid var(--font-blue);
   border-radius: 3px;
 }
+.col-input-each {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2vw;
+}
+.form-color {
+  opacity: 0;
+  border: none;
+  height: 4vh;
+  max-height: 27px;
+}
+
 
 /* tablet */
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-  input[type="color"] {
-    opacity: 0;
-    border: none;
-    height: 4vh;
-    max-height: 27px;
-  }
   form label {
-    height: 28vw;
-    width: 28vw;
+    height: 26vw;
+    width: 26vw;
     max-height: none;
     max-width: none;
-    border: 1px solid var(--color-border);
-    border-radius: 15px;
+    border-radius: 25px;
+    margin: 2.5vw 0;  
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
   }
-  .input-info {
+  .color-info {
     width: 25vw;
-    text-align: center;
+    padding: 0 3vw;
   }
+  .color-info>h3 {
+    display: none;
+  }
+  .color-info>h5 {
+    font-size: 2vw;
+    line-height: 4vw;
+    height: 3.5vw;
+    margin: .7vw 0;
+    border: 2px solid var(--font-blue);
+    border-radius: 6px;
+  }
+  .col-input-each {
+    flex-direction: column;
+    margin: 1vw;
+  }
+  .form-color {
+    opacity: 0;
+    border: none;
+    max-height: none;
+    height: 40px;
+  }
+  
 }
-/* laptops */
+/* laptop */
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
 }
 /* desktop */
