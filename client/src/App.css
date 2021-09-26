@@ -16,6 +16,7 @@ button {
   background-color: transparent;
 }
 main {
+
   margin: 0;
   display: flex;
   grid-row: 2 / 3;
@@ -26,22 +27,20 @@ main {
   min-height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-rows: 24vh 1fr 30px;
+  grid-template-rows: minmax(128px, max-content) 1fr 30px;
   grid-column: 1fr;
+  justify-content: center;
 }
 
 /* tablet */
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-  main {
-    padding-top: 3vh;
-  }
+@media only screen and (min-width: 481px) {
   .App {
-    grid-template-rows: 210px 1fr 50px;
+    grid-template-rows: minmax(min-content, max-content) 1fr 40px;
   }
 }
 
 /* laptop */
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
+@media only screen and (min-width: 769px) {
   main {
     padding: 0 5vw;
     flex-wrap: wrap;
@@ -50,7 +49,7 @@ main {
     align-content: flex-start;
   }
   .App {
-    grid-template-rows: 27vw 1fr 50px;
+    grid-template-rows: minmax(min-content, max-content) 1fr 40px;
   }
 }
 /* desktop */

@@ -28,7 +28,7 @@ const ColorInput2 = (props) => {
         />
       </label>
       <section className="color-info">
-        <h3></h3>
+        <h3>{props.name2}</h3>
         <h5 className="color-code" onClick={props.copyText}>{props.color2}</h5>
         <h5 className="color-code" onClick={props.copyText}>rgb({rgb.r}, {rgb.g}, {rgb.b})</h5>
       </section>

@@ -30,9 +30,9 @@ const Form = (props) => {
         setColor1(palette.fields.hex1);
         setColor2(palette.fields.hex2);
         setColor3(palette.fields.hex3);
-        setName1("");
-        setName2("");
-        setName3("");
+        setName1(palette.fields.name1);
+        setName2(palette.fields.name2);
+        setName3(palette.fields.name3);
       }
     }
   }, [params.id, props.palettes]);
@@ -83,6 +83,12 @@ const Form = (props) => {
     }
   };
   
+  const fetchName = async (hexCode, setcolorName) => {
+    const colorCode = hexCode.replace('#', '')
+    const response = await axios.get(`http://thecolorapi.com/id?hex=${colorCode}`);
+    setcolorName(response.data.name.value);
+    console.log(response.data.name.value)
+  }
 
   return (
     <>
@@ -114,9 +120,9 @@ const Form = (props) => {
           />
         )}
         <div id='col-inputs-container'>
-          <ColorInput1 color1={color1} setColor1={setColor1} hexToRgb={hexToRgb} copyText={copyText}/>
-          <ColorInput2 color2={color2} setColor2={setColor2} hexToRgb={hexToRgb} copyText={copyText}/>
-          <ColorInput3 color3={color3} setColor3={setColor3} hexToRgb={hexToRgb} copyText={copyText}/>
+          <ColorInput1 color1={color1} name1={name1} setColor1={setColor1} setName1={setName1} hexToRgb={hexToRgb} copyText={copyText} fetchName={fetchName}/>
+          <ColorInput2 color2={color2} name2={name2} setColor2={setColor2} setName2={setName2} hexToRgb={hexToRgb} copyText={copyText} fetchName={fetchName}/>
+          <ColorInput3 color3={color3} name3={name3} setColor3={setColor3} setName3={setName3} hexToRgb={hexToRgb} copyText={copyText} fetchName={fetchName}/>
         </div>
         <button type="submit" id="submit-btn">
           save palette

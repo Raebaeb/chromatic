@@ -11,17 +11,19 @@
   grid-row: 1 / 2;
   margin-right: 2vh;
 }
-
-.edit-link, .delete-btn, .palette-username {
+.edit-link,
+.delete-btn,
+.palette-username {
   align-self: end;
 }
 .palette-all {
   margin: 0 auto;
+  padding-top: 5vmin;
 }
 .palette-card {
   box-sizing: border-box;
   display: grid;
-  margin: 1vh 0;
+  margin: 0;
   grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: 1fr 3fr;
   height: 115px;
@@ -29,8 +31,8 @@
   border: solid 2px var(--font-blue);
   border-radius: 15px;
 }
-
-.palette-card button {
+.delete-btn,
+.edit-link > .edit-btn {
   width: 60px;
   height: 20px;
   font-family: var(--reg-font);
@@ -39,7 +41,8 @@
   border: 1px solid var(--font-blue);
   border-radius: 3px;
 }
-.edit-btn:hover, .delete-btn:hover {
+.edit-btn:hover,
+.delete-btn:hover {
   color: var(--mustard);
   border: solid 1px var(--mustard);
 }
@@ -55,13 +58,16 @@
   justify-content: space-evenly;
   align-items: center;
 }
-.palette-name, .palette-username, .palette-name-top {
+.palette-name,
+.palette-username,
+.palette-name-top {
   display: none;
 }
-.palette-username-top, .palette-name-top {
+.palette-username-top,
+.palette-name-top {
   font-family: var(--logo-font);
   color: var(--orange);
-  font-size: 15px;
+  font-size: 4vmin;
   text-align: center;
   grid-row: 1 / 2;
   grid-column: 2 / 3;
@@ -70,9 +76,8 @@
   align-self: end;
 }
 
-
 /* tablet */
-@media only screen and (min-width: 481px) and (max-width: 768px) {
+@media only screen and (min-width: 481px) {
   .color-1,
   .color-2,
   .color-3 {
@@ -83,13 +88,15 @@
     border: solid 1px var(--color-border);
     border-radius: 15px;
   }
-  .delete-btn, .edit-link  {
+  .delete-btn,
+  .edit-link {
     justify-self: center;
     align-self: center;
     grid-row: 2 / 3;
   }
   .palette-all {
-    margin: 0 auto 2vw auto;
+    padding-top: 3vmin;
+    margin: 0 auto;
     width: 80vw;
     max-width: 520px;
     display: flex;
@@ -101,9 +108,10 @@
     max-height: 140px;
     height: 18vh;
     margin: 0;
-    border-radius: 25px;
+    border-radius: 22px;
   }
-  .palette-card button, .edit-link>.edit-btn {
+  .delete-btn,
+  .edit-link > .edit-btn {
     width: 13vw;
     height: 30px;
     max-width: 80px;
@@ -143,7 +151,7 @@
   }
 }
 /* laptops */
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
+@media only screen and (min-width: 769px) {
   .color-1,
   .color-2,
   .color-3 {
@@ -151,23 +159,26 @@
     height: 8vw;
     border-radius: 15px;
   }
-  .delete-btn, .edit-link  {
-    align-self: center;
+  .edit-link {
+    grid-row: 1 / 2;
   }
   .palette-all {
     width: 42vw;
-    margin-bottom: 2vw;
+    max-width: none;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
   }
   .palette-card {
-    grid-template-rows: 1fr; 
+    grid-template-rows: 1fr;
     grid-template-columns: 1fr 4fr 1fr;
     width: 42vw;
+    max-height: 110px;
     margin: 0;
   }
-  .palette-card button, .edit-link>.edit-btn {
+  .delete-btn,
+  .edit-link > .edit-btn {
+    grid-row: 1 / 2;
     width: 6vw;
     height: 24px;
     font-size: 13px;
@@ -175,11 +186,7 @@
     margin: 1vw;
   }
   .palette-colors {
-    grid-column: 2 / 3;
     grid-row: 1 / 2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
   .palette-name-top {
     display: inline;
@@ -187,21 +194,31 @@
     font-size: 1.6vw;
     text-align: left;
     margin: 0 0 0 3vw;
-    justify-self: flex-start;
+    padding-bottom: 1px;
+    align-self: flex-start;
   }
   .palette-username {
-    display: inline;
-    color: var(--teal);
     margin: 0 3vw 0 0;
     font-size: 1.5vw;
-    text-align: right;
-    justify-self: flex-end;
   }
-  .palette-name, .palette-username-top {
+  .palette-name,
+  .palette-username-top {
     display: none;
   }
 }
 
 /* desktop */
 @media only screen and (min-width: 1025px) {
+  .palette-all, .palette-card {
+    max-width: 605px;
+  }
+  .palette-colors {
+    justify-content: space-evenly;
+  }
+  .palette-username {
+    font-size: 21px;
+  }
+  .palette-name-top {
+    font-size: 23px;
+  }
 }

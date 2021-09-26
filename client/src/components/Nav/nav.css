@@ -6,9 +6,7 @@ header {
   flex-direction: column;
   grid-row: 1 / 2;
   grid-column: 1 / 2;
-  contain: content;
   padding-top: 2vh;
-  box-sizing: border-box;
 }
 nav {
   display: flex;
@@ -28,10 +26,7 @@ nav a {
 }
 
 /* tablet */
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-  header {
-    height: 210px;
-  }
+@media only screen and (min-width: 481px) {
   
   nav {
     padding: 12px 0 8px 0;
@@ -43,26 +38,23 @@ nav a {
   
   #logo {
     width: 85vw;
-    max-width: 510px;
+    max-width: 600px;
   }
 
 }
 /* laptops */
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-  header {
-    margin-top: 0;
-  }
-  
-  nav a {
-    font-size: 3vw;
-  }
+@media only screen and (min-width: 769px) {
   #logo {
-    width: 55vw;  
-    max-width: none;
+    width: 55vw;
+  }
+  nav a {
+    font-size: 25px;
   }
 }
 
 /* desktop */
 @media only screen and (min-width: 1025px) {
-
+  #logo {
+    max-height: 200px;
+  }
 }

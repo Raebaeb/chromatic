@@ -4,7 +4,7 @@ import './colorinputs.css'
 
 const ColorInput1 = (props) => {
   const [rgb, setRgb] = useState({})
-  
+
   useEffect(() => {
     setRgb(props.hexToRgb(props.color1))
   },[props])
@@ -21,10 +21,13 @@ const ColorInput1 = (props) => {
           onChange={(e) => {
             props.setColor1(e.target.value);
           }}
+          onBlur={() => {
+            props.fetchName(props.color1, props.setName1)
+          }}
         />
         </label>
         <section className="color-info">
-          <h3>placeholder</h3>
+          <h3>{props.name1}</h3>
           <h5 className="color-code" onClick={props.copyText}>{props.color1}</h5>
           <h5 className="color-code" onClick={props.copyText}>rgb({rgb.r}, {rgb.g}, {rgb.b})</h5>
         </section>
