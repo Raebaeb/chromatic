@@ -73,13 +73,17 @@ h5 {
   }
   .color-info {
     width: 25vw;
-    padding: 0 2vw;
+    padding: 0;
+  }
+  .color-info>h3 {
+    font-size: 15px;
   }
   .color-info>h5 {
+    max-width: 150px;
     font-size: 15px;
     padding: 5px 0;
     line-height: normal;
-    margin: .7vw 0;
+    margin: .7vw auto;
     border: 2px solid var(--font-blue);
     border-radius: 6px;
   }
