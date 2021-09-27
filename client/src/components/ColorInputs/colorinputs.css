@@ -22,31 +22,29 @@ form label {
 #submit-btn {
   box-sizing: border-box;
   color: var(--font-blue);
-}
-
-.color-info {
-  box-sizing: border-box;
-  width: 35vw;
   text-align: center;
-  padding-left: 7vw;
-}
-.color-info h3,
-h5 {
-  box-sizing: border-box;
-  margin: 3px 0;
-  padding: 2px 0;
 }
 .color-info h3 {
   font-family: var(--logo-font);
+  font-size: 12px;
+  margin: 0;
+  line-height: 12px;
+  max-width: 30vw;
 }
 .color-info h5 {
   border: 1px solid var(--font-blue);
   border-radius: 3px;
+  width: 30vw;
+  min-width: 100px;
+  margin: 3px auto 0 auto;
 }
 .col-input-each {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 2vw;
+  width: 62vw;
+  max-width: 250px;
 }
 .copied {
   background-color: var(--font-blue);
@@ -79,8 +77,7 @@ h5 {
     font-size: 15px;
   }
   .color-info>h5 {
-    max-width: 150px;
-    font-size: 15px;
+    max-width: 130px;
     padding: 5px 0;
     line-height: normal;
     margin: .7vw auto;
@@ -90,7 +87,7 @@ h5 {
   .col-input-each {
     flex-direction: column;
     margin: 1vw;
-    max-width: 330px;
+    width: 30vw;
   }
   .form-color {
     opacity: 0;
@@ -115,17 +112,27 @@ h5 {
     max-width: 220px;
     padding: 0;
   }
+  .color-info>h3 {
+    line-height: normal;
+    margin-top: 7px;
+  }
   .color-info>h5 {
-    box-sizing: border-box;
     line-height: normal;
     max-height: 32px;
     max-width: 150px;
-    margin: 0 auto .7vw auto;
+    margin: 7px auto 0 auto;
   }
 }
 /* desktop */
 @media only screen and (min-width: 1025px) {
   form label {
     font-size: 50px;
+    border: 2px solid var(--color-border);
+  }
+  .color-info>h3 {
+    font-size: 16px;
+  }
+  #col-inputs-container {
+    max-width: 800px;
   }
 }

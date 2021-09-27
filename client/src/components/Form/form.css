@@ -57,14 +57,14 @@ form {
 #form-user,
 #edit-user {
   color: var(--teal);
+  font-size: 12px;
   grid-column: 1 / 3;
   grid-row: 2 / 3;
   align-self: flex-start;
   width: 40vw;
   height: 3vh;
-  margin-top: 0;
+  margin: 0;
 }
-
 #submit-btn {
   color: var(--font-blue);
   margin: 0 auto;

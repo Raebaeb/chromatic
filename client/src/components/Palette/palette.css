@@ -58,13 +58,11 @@
   justify-content: space-evenly;
   align-items: center;
 }
+
 .palette-name,
+.palette-name-top, 
 .palette-username,
-.palette-name-top {
-  display: none;
-}
-.palette-username-top,
-.palette-name-top {
+.palette-username-top {
   font-family: var(--logo-font);
   color: var(--orange);
   font-size: 4vmin;
@@ -74,6 +72,11 @@
   margin: 0;
   line-height: 20px;
   align-self: end;
+}
+.palette-name,
+.palette-username,
+.palette-name-top {
+  display: none;
 }
 
 /* tablet */
@@ -143,7 +146,7 @@
     display: inline;
     color: var(--teal);
     margin: 0 5vw 0 0;
-    font-size: 2vw;
+    font-size: 14px;
     text-align: right;
   }
   .palette-username-top {
@@ -164,6 +167,7 @@
   }
   .palette-all {
     width: 42vw;
+    padding-top: 25px;
     max-width: none;
     display: flex;
     flex-wrap: wrap;
@@ -174,7 +178,7 @@
     grid-template-columns: 1fr 4fr 1fr;
     width: 42vw;
     max-height: 110px;
-    margin: 0;
+    border-radius: 15px;
   }
   .delete-btn,
   .edit-link > .edit-btn {
@@ -216,9 +220,11 @@
     justify-content: space-evenly;
   }
   .palette-username {
-    font-size: 21px;
+    margin-top: 3px;
+    font-size: 18px;
   }
   .palette-name-top {
     font-size: 23px;
+    margin-bottom: 3px;
   }
 }
