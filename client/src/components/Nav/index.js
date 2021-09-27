@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './nav.css';
-import logoMin from '../../assets/logoMin.svg'
+import logo from '../../assets/logo.png'
 
 const Nav = () => {
   return (
@@ -10,7 +10,7 @@ const Nav = () => {
         <Link to='/new'>create palette</Link>
       </nav>
         <Link to='/' id='logo-link'>
-          <img src={logoMin} id='logo' alt='chromatica logo'/>
+          <img src={logo} id='logo' alt='chromatica logo'/>
         </Link>
     </header>
   );

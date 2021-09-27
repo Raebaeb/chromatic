@@ -204,6 +204,7 @@
   .palette-username {
     margin: 0 3vw 0 0;
     font-size: 1.5vw;
+    align-self: flex-end;
   }
   .palette-name,
   .palette-username-top {
