@@ -18,9 +18,6 @@ form label {
   border-radius: 15px;
   grid-column: 1 / 2;
 }
-.color-code {
-
-}
 .color-info,
 #submit-btn {
   box-sizing: border-box;
@@ -37,7 +34,6 @@ form label {
 h5 {
   box-sizing: border-box;
   margin: 3px 0;
-  font-size: 3vw;
   padding: 2px 0;
 }
 .color-info h3 {
@@ -59,8 +55,7 @@ h5 {
 .form-color {
   opacity: 0;
   border: none;
-  height: 4vh;
-  max-height: 27px;
+  height: 20px;
 }
 
 /* tablet */
@@ -78,7 +73,7 @@ h5 {
   }
   .color-info {
     width: 25vw;
-    padding: 0 3vw;
+    padding: 0 2vw;
   }
   .color-info>h5 {
     font-size: 15px;
@@ -113,23 +108,20 @@ h5 {
     padding-bottom: 40px;
   }
   .color-info {
-    max-width: 170px;
+    max-width: 220px;
     padding: 0;
   }
   .color-info>h5 {
     box-sizing: border-box;
     line-height: normal;
     max-height: 32px;
-    max-width: 210px;
-    margin: .7vw 0;
+    max-width: 150px;
+    margin: 0 auto .7vw auto;
   }
 }
 /* desktop */
 @media only screen and (min-width: 1025px) {
   form label {
     font-size: 50px;
-  }
-  .color-info>h5 {
-    margin: 12px 0;
   }
 }

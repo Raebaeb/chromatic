@@ -31,7 +31,9 @@ main {
   grid-column: 1fr;
   justify-content: center;
 }
-
+.svg-text {
+  font-family: var(--logo-font)
+}
 /* tablet */
 @media only screen and (min-width: 481px) {
   .App {

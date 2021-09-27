@@ -15,9 +15,9 @@ const Form = (props) => {
   const [color1, setColor1] = useState("#A7ABAE");
   const [color2, setColor2] = useState("#A7ABAE");
   const [color3, setColor3] = useState("#A7ABAE");
-  const [name1, setName1] = useState("");
-  const [name2, setName2] = useState("");
-  const [name3, setName3] = useState("");
+  const [name1, setName1] = useState("...");
+  const [name2, setName2] = useState("...");
+  const [name3, setName3] = useState("...");
 
   useEffect(() => {
     if (params.id) {
@@ -30,9 +30,9 @@ const Form = (props) => {
         setColor1(palette.fields.hex1);
         setColor2(palette.fields.hex2);
         setColor3(palette.fields.hex3);
-        setName1(palette.fields.name1);
-        setName2(palette.fields.name2);
-        setName3(palette.fields.name3);
+        setName1(palette.fields.color1);
+        setName2(palette.fields.color2);
+        setName3(palette.fields.color3);
       }
     }
   }, [params.id, props.palettes]);
@@ -46,6 +46,9 @@ const Form = (props) => {
         hex2: color2,
         hex3: color3,
         username: username,
+        color1: name1,
+        color2: name2,
+        color3: name3
       },
     };
     if (params.id) {
