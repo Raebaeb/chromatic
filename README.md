@@ -96,7 +96,7 @@ The functionality will then be divided into two separate lists: MVP and PostMVP.
 | Transitions | L | 3hrs |  |  |
 | Keep README updated | L | 1hrs |  |  |
 | Code Cleanup | H | 1hr|  |  |
-| Total | H | 42hrs|  |  |
+| Total | H | 42hrs|  | 39hrs |
 
 ## SWOT Analysis
 
@@ -107,3 +107,59 @@ The functionality will then be divided into two separate lists: MVP and PostMVP.
 ### Opportunities: Build smallest to biggest
 
 ### Threats: Styling. I need to push my styling priorities to post-MVP in order to really nail down the functionality before MVP is due.
+
+## Code Wins!
+
+copy/paste functionality
+```
+  async function copyText(e) {
+    if (!navigator.clipboard) {
+      return
+    }
+    const text = e.target.innerText
+    try {
+      await navigator.clipboard.writeText(text);
+      e.target.className = "color-code copied"
+      e.target.textContent = "copied!"
+      setTimeout(() => {
+        e.target.className = "color-code";
+        e.target.textContent = text;
+      }, 1000)
+    } catch (err) {
+      console.error('Failed to copy!', err)
+    }
+  };
+```
+hext to rgb conversion in form component
+```
+  function hexToRgb(hex) {
+    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+      r: parseInt(result[1], 16),
+      g: parseInt(result[2], 16),
+      b: parseInt(result[3], 16)
+    } : null;
+  }
+```
+useEffect to attach RGB to hexcode changes in colorinput component
+```
+    const [rgb, setRgb] = useState({});
+    
+    useEffect(() => {
+    setRgb(props.hexToRgb(props.color1))
+  },[props])
+```
+Axios call to remove '#' from the hexcode and make the GET request for color name. I was able to pass hexCode and setColorName as parameters so I could reuse the same function in each colorinput component
+```
+  const fetchName = async (hexCode, setcolorName) => {
+    const colorCode = hexCode.replace('#', '')
+    const response = await axios.get(`https://www.thecolorapi.com/id?hex=${colorCode}`);
+    setcolorName(response.data.name.value);
+  }
+```
+GET color name when unfocusing the color picker input in colorinput component
+```
+    onBlur={() => {
+      props.fetchName(props.color1, props.setName1)
+    }}
+```
