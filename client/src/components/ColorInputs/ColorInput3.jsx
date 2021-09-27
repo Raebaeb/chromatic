@@ -26,6 +26,9 @@ const ColorInput3 = (props) => {
             props.setColor3(e.target.value);
             setRgb(props.hexToRgb(props.color3));  
           }}
+          onBlur={() => {
+            props.fetchName(props.color3, props.setName3)
+          }}
         />
       </label>
       <section className="color-info">

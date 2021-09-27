@@ -87,7 +87,6 @@ const Form = (props) => {
     const colorCode = hexCode.replace('#', '')
     const response = await axios.get(`https://www.thecolorapi.com/id?hex=${colorCode}`);
     setcolorName(response.data.name.value);
-    console.log(response.data.name.value)
   }
 
   return (
