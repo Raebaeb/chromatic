@@ -91,7 +91,6 @@ const Form = (props) => {
   }
 
   return (
-    <>
       <form onSubmit={handleSubmit}>
         <input
           required
@@ -128,7 +127,6 @@ const Form = (props) => {
           save palette
         </button>
       </form>
-    </>
   );
 };
 
